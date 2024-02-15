@@ -23,7 +23,10 @@ function App() {
   };
 
   const handleButtonClick = () => {
-    setShowPopup(true);
+    if (input.trim() === '') {
+      alert('Please enter a message before clicking the button!');
+    } 
+    else setShowPopup(true);
   };
 
   const closePopup = () => {
